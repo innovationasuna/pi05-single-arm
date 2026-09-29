@@ -1,0 +1,14 @@
+{
+  "task": "Put the block to the white box",
+  "episodes": 120,
+  "source_dataset": "data/demo_move_block",
+  "base_params": "weights/pi05_base/params",
+  "experiment": "demo_move_block_full_v1",
+  "checkpoint": 20000,
+  "action_start_index": 2,
+  "local_python": "python",
+  "uv": "uv",
+  "robot": {"host": "localhost", "port": 12345, "leader_port": "/dev/ttyACM0"},
+  "cameras": {"handeye": 4, "fixed": 2},
+  "policy": {"host": "localhost", "port": 6006}
+}

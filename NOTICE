@@ -1,0 +1,10 @@
+π0.5 Single Arm
+Integration workspace by the repository author.
+
+This project references pinned forks of:
+- Physical Intelligence OpenPI (Apache-2.0; additional Gemma terms retained)
+- Hugging Face LeRobot (Apache-2.0)
+
+All original copyright and license files remain in the source submodules.
+The integration does not transfer ownership of upstream frameworks or model weights.
+Demo photographs and videos in assets/ are excluded from the code license.

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-label="Dual-camera collection to pi0.5 full fine-tuning, cloud policy, and local robot execution">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#65778b" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="290" rx="18" fill="#f7f9fc"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="30" y="36" font-size="13" font-weight="700" letter-spacing="2" fill="#566980">FROM DEMONSTRATIONS TO REAL-WORLD ACTIONS</text>
+<g fill="#fff" stroke="#d7e0eb"><rect x="30" y="62" width="260" height="153" rx="12"/><rect x="324" y="62" width="260" height="153" rx="12"/><rect x="618" y="62" width="260" height="153" rx="12"/><rect x="912" y="62" width="258" height="153" rx="12"/></g>
+<g fill="#265b88" font-size="13" font-weight="700"><text x="50" y="89">01 / COLLECT</text><text x="344" y="89">02 / FINE-TUNE</text><text x="638" y="89">03 / SERVE</text><text x="932" y="89">04 / EXECUTE</text></g>
+<g fill="#142a40" font-size="23" font-weight="700"><text x="50" y="123">Dual-camera teleop</text><text x="344" y="123">π0.5 · Full tuning</text><text x="638" y="123">Cloud policy</text><text x="932" y="123">Single-arm robot</text></g>
+<g fill="#506477" font-size="16"><text x="50" y="157">120 demonstrations</text><text x="50" y="184">Fixed + wrist RGB</text><text x="344" y="157">1 × H20 · 7-D actions</text><text x="344" y="184">LeRobot → OpenPI</text><text x="638" y="157">WebSocket inference</text><text x="638" y="184">50-step action chunks</text><text x="932" y="157">Local action execution</text><text x="932" y="184">Block pick-and-place</text></g>
+<g stroke="#65778b" stroke-width="2" marker-end="url(#arrow)"><path d="M294 140h23"/><path d="M588 140h23"/><path d="M882 140h23"/></g>
+<path d="M1041 221v26H748v-23" stroke="#8799aa" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text x="862" y="271" text-anchor="middle" fill="#566980" font-size="13">RGB + robot state + instruction</text>
+<text x="30" y="264" fill="#65778b" font-size="13">LOCAL COLLECTION</text><text x="344" y="264" fill="#65778b" font-size="13">GPU TRAINING</text>
+</g></svg>

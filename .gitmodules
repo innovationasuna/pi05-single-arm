@@ -1,0 +1,6 @@
+[submodule "modules/openpi"]
+	path = modules/openpi
+	url = https://github.com/innovationasuna/openpi_single.git
+[submodule "modules/lerobot"]
+	path = modules/lerobot
+	url = https://github.com/innovationasuna/lerobot_single.git
