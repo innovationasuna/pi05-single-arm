@@ -29,7 +29,7 @@ An end-to-end Episode1 single-arm workflow: **demonstration collection → π0.5
 
 <img src="assets/demo-sequence.jpg" width="100%" alt="Three real frames: approach, lift and transport, release into tray" />
 
-## My contributions
+## Key Contributions
 
 - **Collection**: connected a teleoperation leader, Episode1 follower and two cameras; aligned state/action ordering and recorded demonstrations.
 - **Training**: adapted LeRobot data, image preprocessing and normalization for π0.5 full fine-tuning; addressed checkpoint memory peaks and training recovery.
