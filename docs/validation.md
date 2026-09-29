@@ -4,6 +4,7 @@ Verified on macOS during repository integration (2026-09-29):
 
 - Eight dependency-free `unittest` tests passed. They cover all six stage commands, subprocess dispatch/cwd, full-finetune selection, explicit checkpoint serving, paths containing spaces, camera roles, radians flag, action index validation and missing configuration. Subprocesses for robot/GPU execution were mocked.
 - All six CLI `--dry-run` invocations ran from outside the repository without importing ML dependencies.
+- Published Chinese and English README pages were opened in ego-browser; the Chinese hero, pipeline figure and demonstration strip were visually checked on GitHub.
 - Both submodule revisions and source licenses were inspected. Training/data/client contracts were reviewed statically.
 - All eight provided phone videos were screened with contact sheets; selected grasp/lift/release frames were visually checked. The published MP4 decoded fully. See [media provenance](media.md).
 
