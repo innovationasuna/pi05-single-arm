@@ -29,13 +29,11 @@
 
 <img src="assets/demo-sequence.jpg" width="100%" alt="抓取、提起运输、释放到白盒的三个实拍阶段" />
 
-选自同一连续片段，展示接近、提起与放置。演示为定性记录，不代表统计成功率。[素材来源与时间点](docs/media.md)
-
 ## 我做了什么
 
-- **采集链路：**接入遥操作主臂、Episode1 从臂与双相机，统一状态/动作顺序并完成示范数据录制。
-- **训练适配：**转换 LeRobot 数据，衔接图像预处理与归一化；完成 π0.5 全量微调，并处理 checkpoint 保存内存和训练恢复问题。
-- **真机部署：**将云端策略服务与本地客户端连接，处理动作块执行、状态校验及通信异常恢复。
+- **采集链路**：接入遥操作主臂、Episode1 从臂与双相机，统一状态/动作顺序并完成示范数据录制。
+- **训练适配**：转换 LeRobot 数据，衔接图像预处理与归一化；完成 π0.5 全量微调，并处理 checkpoint 保存内存和训练恢复问题。
+- **真机部署**：将云端策略服务与本地客户端连接，处理动作块执行、状态校验及通信异常恢复。
 
 ## 运行入口
 
@@ -57,8 +55,10 @@ python scripts/pipeline.py serve    # 云端：启动策略服务
 python scripts/pipeline.py infer    # 本地：通过 SSH 隧道执行策略
 ```
 
-## 代码组织与致谢
+## 项目结构
 
-`modules/lerobot` 负责采集与真机执行，`modules/openpi` 负责训练与服务；两个子模块固定到明确版本，保留原始历史与许可证。顶层只维护配置、运行入口和文档。
+- `modules/lerobot`：双相机数据采集与本地真机客户端。
+- `modules/openpi`：数据转换、模型微调与云端策略服务。
+- `configs/`、`scripts/`：统一设备配置与各阶段运行入口。
 
-基于 [Physical Intelligence / OpenPI](https://github.com/Physical-Intelligence/openpi) 与 [Hugging Face / LeRobot](https://github.com/huggingface/lerobot)，保留 [openpi_single](https://github.com/innovationasuna/openpi_single) 和 [lerobot_single](https://github.com/innovationasuna/lerobot_single) 两个原仓库。代码采用 Apache-2.0；模型条款与演示媒体说明见 [来源与许可](docs/provenance.md)。
+基于 [OpenPI](https://github.com/Physical-Intelligence/openpi) 与 [LeRobot](https://github.com/huggingface/lerobot) 构建，源码以固定版本子模块管理。代码采用 Apache-2.0，完整来源及许可见 [项目说明](docs/provenance.md)。

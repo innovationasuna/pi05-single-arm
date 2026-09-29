@@ -29,13 +29,11 @@ An end-to-end Episode1 single-arm workflow: **demonstration collection → π0.5
 
 <img src="assets/demo-sequence.jpg" width="100%" alt="Three real frames: approach, lift and transport, release into tray" />
 
-Frames from one continuous clip show approach, lift and placement. This is a qualitative demonstration, not a measured success rate. [Footage provenance](docs/media.md)
-
 ## My contributions
 
-- **Collection:** connected a teleoperation leader, Episode1 follower and two cameras; aligned state/action ordering and recorded demonstrations.
-- **Training:** adapted LeRobot data, image preprocessing and normalization for π0.5 full fine-tuning; addressed checkpoint memory peaks and training recovery.
-- **Deployment:** connected a cloud policy server to the local robot client, including action-chunk execution, state validation and communication recovery.
+- **Collection**: connected a teleoperation leader, Episode1 follower and two cameras; aligned state/action ordering and recorded demonstrations.
+- **Training**: adapted LeRobot data, image preprocessing and normalization for π0.5 full fine-tuning; addressed checkpoint memory peaks and training recovery.
+- **Deployment**: connected a cloud policy server to the local robot client, including action-chunk execution, state validation and communication recovery.
 
 ## Run the pipeline
 
@@ -57,8 +55,10 @@ python scripts/pipeline.py serve    # Cloud: serve the policy
 python scripts/pipeline.py infer    # Local: execute via an SSH tunnel
 ```
 
-## Organization & credits
+## Project structure
 
-`modules/lerobot` handles collection and robot execution; `modules/openpi` handles training and serving. Both are pinned submodules with their original history and licenses. This workspace adds configuration, a stage launcher and documentation.
+- `modules/lerobot`: dual-camera collection and the local robot client.
+- `modules/openpi`: dataset conversion, model fine-tuning and cloud policy serving.
+- `configs/` and `scripts/`: shared device configuration and stage entry points.
 
-Built on [Physical Intelligence / OpenPI](https://github.com/Physical-Intelligence/openpi) and [Hugging Face / LeRobot](https://github.com/huggingface/lerobot). The original [openpi_single](https://github.com/innovationasuna/openpi_single) and [lerobot_single](https://github.com/innovationasuna/lerobot_single) repositories remain available. Code is Apache-2.0; see [sources and licensing](docs/provenance.md) for model terms and demo media.
+Built on [OpenPI](https://github.com/Physical-Intelligence/openpi) and [LeRobot](https://github.com/huggingface/lerobot), with source revisions pinned as Git submodules. Code is Apache-2.0; see [project notes](docs/provenance.md) for full attribution and licensing.
